@@ -1,9 +1,20 @@
+@font-face {
+    font-family: 'comicsans';
+    src: url('https://preview.c9users.io/sophieh/projects/911Fonts.com_ComicSansMSRegular__-_911fonts.com-fonts-BpCS.ttf');
+}
+
+body {
+    text-align: center;
+    font-family: 'comicsans', "Comic Sans MS";
+}
+
 #easy {
     width: 300px;
     height: 300px;
     border-radius: 150px;
     border-color: black;
     background-color: red;
+    font-family: 'comicsans', "Comic Sans MS";
     font-size: 50px;
     color: white;
 }
