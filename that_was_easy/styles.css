@@ -5,20 +5,37 @@
 
 body {
     text-align: center;
+    background-color: white;
+}
+
+.button {
+    position: absolute;
 }
 
 #easy {
     width: 300px;
     height: 300px;
     border-radius: 150px;
-    border: 10px solid;
-    background-color: red;
+    border: 1px solid #d02718;
+    background-image: linear-gradient(to bottom, #e60000, #cd0000);
     font-family: 'comicsans', "Comic Sans MS";
     font-size: 50px;
     color: white;
-    box-shadow: 0px 5px 0px;
+    cursor: pointer;
+    text-shadow: 1px 1px 1px #810d05;
+    box-shadow: 5px 5px 0px #810d05;
+    position: relative;
+    top: 0px;
+    transition: all ease 0.3s;
+    
 }
 
-#easy:focus {
-    outline:none;
+#easy:hover {
+    background-image: linear-gradient(to top, #e60000, #cd0000);
+}
+
+#easy:active {
+    position: relative;
+    top: 3px;
+    box-shadow: 3px 3px 0px #810d05
 }
