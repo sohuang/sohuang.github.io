@@ -3,11 +3,29 @@
     <head>
         <title>that was easy</title>
         <link href="styles.css" rel="stylesheet">
+        
+        <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+        <script src="confetti.js"></script>
     </head>
     <body>
-        <input type ="button" id="easy" value="easy"/>
+        <input type="button" id="easy" value="easy" onclick="confettifunction()">
 
-        <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+        <canvas height='1' id='confetti' width='1' class='hidden'></canvas>
+
         <script src="main.js"></script>
+        
+        <script type="text/javascript">
+            function changeClass()
+            {
+                document.getElementById("confetti").hidden =
+                document.getElementById("confetti").hidden.replace
+                ( /(?:^|\s)hidden(?!\S)/g , '' );
+            }
+
+            window.onload = function()
+            {
+                document.getElementById("confetti").addEventListener( 'click' , changeClass );
+            }
+        </script>
     </body>
 </html>

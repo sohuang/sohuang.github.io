@@ -12,3 +12,11 @@ function delegateKeypress(event) {
         $("#easy").trigger("click");
     }
 }
+
+function removeClassName(confetti, confetti){
+    var remClass = confetti.className;
+    var re = new RegExp('(^| )' + confetti + '( |$)');
+    remClass = remClass.replace(re, '$1');
+    remClass = remClass.replace(/ $/, '');
+    confetti.className = remClass;
+}

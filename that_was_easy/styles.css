@@ -13,8 +13,8 @@ body {
 }
 
 #easy {
-    width: 300px;
-    height: 300px;
+    width: 200px;
+    height: 200px;
     border-radius: 150px;
     border: 1px solid #d02718;
     background-image: linear-gradient(to bottom, #e60000, #cd0000);
@@ -39,3 +39,17 @@ body {
     top: 3px;
     box-shadow: 3px 3px 0px #810d05
 }
+
+.hidden {
+    display: none;
+}
+
+#confetti {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+}
+
+
