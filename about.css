@@ -1,0 +1,15 @@
+@font-face {
+    font-family: 'comicsans';
+    src: url('https://preview.c9users.io/sophieh/projects/911Fonts.com_ComicSansMSRegular__-_911fonts.com-fonts-BpCS.ttf');
+}
+.kanye {
+    width: 200px;
+}
+body {
+    text-align: center;
+    font-family: 'comicsans', "Comic Sans MS", sans-serif;
+    
+    background-image: url("http://67.media.tumblr.com/ccd6564b657d03f126451fa05f3af8dd/tumblr_inline_mtjpahJTjv1s9mv75.png");
+    background-repeat: repeat;
+    
+}
