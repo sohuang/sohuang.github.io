@@ -13,10 +13,16 @@ function delegateKeypress(event) {
     }
 }
 
-function removeClassName(confetti, confetti){
-    var remClass = confetti.className;
-    var re = new RegExp('(^| )' + confetti + '( |$)');
-    remClass = remClass.replace(re, '$1');
-    remClass = remClass.replace(/ $/, '');
-    confetti.className = remClass;
+function thatWasYeezy() {
+    var src = "http://24.media.tumblr.com/tumblr_m3xntmAqPA1rue873o1_400.png";
+    show_image("http://24.media.tumblr.com/tumblr_m3xntmAqPA1rue873o1_400.png", 150,201, "That Was Yeezy");
+}
+
+function show_image(src, width, height, alt) {
+    var img = document.createElement("img");
+    img.src = src;
+    img.width = 150;
+    img.height = 201;
+    img.alt = alt;
+    document.body.appendChild(img);
 }
