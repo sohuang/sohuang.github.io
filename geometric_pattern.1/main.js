@@ -13,7 +13,7 @@ var bVal;
 var animated;
 
 function setup() {
-    canvas = createCanvas(480, 600);
+    canvas = createCanvas(600, 480);
 
     frameRate(3);
     
