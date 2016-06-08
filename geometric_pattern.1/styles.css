@@ -108,3 +108,24 @@ body{
 #changestuff ul li {
     display: inline;
 }
+
+#something {
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+#idk {
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+#ughh {
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+    margin: 5px;
+}
