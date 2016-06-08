@@ -13,3 +13,19 @@ body {
     background-repeat: repeat;
     
 }
+ul {
+    margin: 0px;
+    padding: 0px;
+    list-style-type: none;
+}
+#navlist li {
+    position: absolute;
+    list-style: inline;
+    padding-right: 10px;
+    bottom: 10px;
+    text-align: center;
+    border-bottom: 1px solid #555;
+}
+li:lastchild {
+    border-bottom: none;
+}
