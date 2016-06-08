@@ -1,0 +1,44 @@
+@font-face {
+    font-family: 'comicsans';
+    src: url('https://preview.c9users.io/sophieh/projects/911Fonts.com_ComicSansMSRegular__-_911fonts.com-fonts-BpCS.ttf');
+}
+
+body{
+    background: white;
+}
+
+#pause {
+    font-family: "Comic Sans MS", 'comicsans';
+    font-size: 20px;
+    color: white;
+    text-shadow: 2px 2px 1px #855970;
+    background: #a7708c;
+    margin: 20px;
+    border: 0px;
+    width: 100px;
+    height: 40px;
+    border-radius: 5px;
+}
+
+#pause:hover {
+    background: #82859a;
+    text-shadow: 2px 2px 01px #5d5f73;
+}
+
+#start {
+    font-family: "Comic Sans MS", 'comicsans';
+    font-size: 20px;
+    color: white;
+    text-shadow: 2px 2px 1px #855970;
+    background: #a7708c;
+    margin: 20px;
+    border: 0px;
+    width: 100px;
+    height: 40px;
+    border-radius: 5px;
+}
+
+#start:hover {
+    background: #82859a;
+    text-shadow: 2px 2px 01px #5d5f73;
+}
