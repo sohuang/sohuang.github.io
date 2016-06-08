@@ -5,40 +5,106 @@
 
 body{
     background: white;
+    text-align: center;
+    font-family: "Comic Sans MS", 'comicsans';
 }
 
 #pause {
-    font-family: "Comic Sans MS", 'comicsans';
-    font-size: 20px;
+    font-size: 15px;
     color: white;
-    text-shadow: 2px 2px 1px #855970;
-    background: #a7708c;
-    margin: 20px;
+    text-shadow: 1px 1px 0px #615c5b;
+    background: #a6a1a0;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
     border: 0px;
-    width: 100px;
-    height: 40px;
-    border-radius: 5px;
+    width: 56px;
+    height: 26px;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 2px 2px 0px #575352;
 }
 
 #pause:hover {
     background: #82859a;
-    text-shadow: 2px 2px 01px #5d5f73;
+    text-shadow: 1px 1px 01px #5d5f73;
+}
+
+#pause:active {
+    background: #616477;
+    text-shadow: 1px 1px 01px #4a4c5b;
 }
 
 #start {
     font-family: "Comic Sans MS", 'comicsans';
-    font-size: 20px;
+    font-size: 15px;
     color: white;
-    text-shadow: 2px 2px 1px #855970;
-    background: #a7708c;
-    margin: 20px;
+    text-shadow: 1px 1px 0px #615c5b;
+    background: #a6a1a0;
+    margin-left: 10px;
+    margin-right: 10px;
     border: 0px;
-    width: 100px;
-    height: 40px;
-    border-radius: 5px;
+    width: 56px;
+    height: 26px;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 2px 2px 0px #575352;
 }
 
 #start:hover {
     background: #82859a;
-    text-shadow: 2px 2px 01px #5d5f73;
+    text-shadow: 1px 1px 01px #5d5f73;
+}
+
+#start:active {
+    background: #616477;
+    text-shadow: 2px 2px 01px #4a4c5b;
+}
+
+#save {
+    font-family: "Comic Sans MS", 'comicsans';
+    font-size: 15px;
+    color: white;
+    text-shadow: 1px 1px 0px #615c5b;
+    background: #a6a1a0;
+    margin-left: 10px;
+    margin-right: 10px;
+    border: 0px;
+    width: 56px;
+    height: 26px;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 2px 2px 0px #575352;
+}
+
+#save:hover {
+    background: #82859a;
+    text-shadow: 1px 1px 01px #5d5f73;
+}
+
+#save:active {
+    background: #616477;
+    text-shadow: 2px 2px 01px #4a4c5b;
+}
+
+#controls ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-align: center;
+}
+
+#controls ul li {
+    display: inline;
+}
+
+#changestuff ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-align: center;
+}
+
+#changestuff ul li {
+    display: inline;
 }

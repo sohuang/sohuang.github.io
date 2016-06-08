@@ -1,14 +1,28 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <title>patterns</title>
         <link href="styles.css" rel="stylesheet"/>
     </head>
     <body>
+        <div id="controls">
+            <ul>
+                <li><input type="button" id="pause" value="pause" onclick="freeze();"/></li>
+                <li><input type="button" id="start" value="start" onclick="reset();"/></li>
+                <li><input type="button" id="save" value="save" onclick="save();"/></li>
+            </ul>
+        </div>
+        
         <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.4.12/p5.js"></script>
         <script src="main.js"></script>
         
-        <input type="button" id="pause" value="pause"/>
-        <input type="button" id="start" value="start"/>
-        
+        <div id="changestuff">
+            <ul>
+                <li>make something happen: </li>
+                <li><input type="button" id="something" value="&#9731;" onclick="something();"></li>
+                <li><input type="button" id="idk" value="&#9786;" onclick="idk();"></li>
+                <li><input type="button" id="ughh" value="&#9832;" onclick="ughh();"></li>
+            </ul>
+        </div>
     </body>
 </html>

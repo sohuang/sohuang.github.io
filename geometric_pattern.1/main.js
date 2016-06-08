@@ -1,4 +1,7 @@
 var NUM_CIRCLES = 12;
+var gspace = 1;
+
+var canvas;
 
 var circleDiameter;
 var circleRadius;
@@ -7,10 +10,12 @@ var rVal;
 var gVal;
 var bVal;
 
-function setup() {
-    var c = createCanvas(480, 600);
+var animated;
 
-    frameRate(1);
+function setup() {
+    canvas = createCanvas(480, 600);
+
+    frameRate(3);
     
     circleDiameter = width/NUM_CIRCLES;
     circleRadius = circleDiameter/2;
@@ -20,7 +25,27 @@ function setup() {
     bVal = 0;
 }
 
+function reset() {
+  circleDiameter = width/NUM_CIRCLES;
+  circleRadius = circleDiameter/2;
+  animated = true;
+  rVal = random(0,255);
+  gVal = random(0,255);
+  bVal = random(0,255);
+}
+
 function draw() {
+    if (animated) {
+        drawAnimated();
+    }
+}
+
+function freeze() {
+  animated = !animated;
+  return false;
+}
+
+function drawAnimated() {
     var isShifted = false;
     
     var y = height;
@@ -35,10 +60,13 @@ function draw() {
         }
         
         while (x <= width) {
+                
+                var g = 1;
+                
             stroke(color(rVal, gVal, bVal));
             fill(color(rVal, gVal, bVal));
             ellipse(x, y, circleDiameter, circleDiameter);
-            x = x + circleDiameter;
+            x = (gspace * x) + circleDiameter;
         }
         
         y = y - circleRadius;
@@ -55,4 +83,25 @@ function keyPressed() {
         saveCanvas('geometricPattern', 'png');
     }
     return false;
+}
+
+function save() {
+    saveCanvas('geometricPattern', 'png');
+}
+
+function something() {
+    gspace++;
+    reset();
+}
+
+function idk() {
+    NUM_CIRCLES++;
+    reset();
+}
+
+function ughh() {
+    if (NUM_CIRCLES > 1) {
+        NUM_CIRCLES--;
+        reset();
+    }
 }
