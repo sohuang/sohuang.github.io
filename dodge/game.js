@@ -1,24 +1,23 @@
 var player;
 var playerImage;
-var enemy;
-var enemyImage;
+var enemy1;
+var enemy1Image;
 var backgroundImage;
 var score = 0;
 
 function preload() {
     playerImage = loadImage("https://surrogate.hackedu.us/i.imgur.com/N5uCbDu.png");
-    enemyImage = loadImage("https://surrogate.hackedu.us/i.imgur.com/OdL0XPt.png");
+    enemy1Image = loadImage("https://surrogate.hackedu.us/i.imgur.com/OdL0XPt.png");
     backgroundImage = loadImage("https://surrogate.hackedu.us/i.imgur.com/aKQOg3G.png");
-    //https://surrogate.hackedu.us/i.imgur.com/aKQOg3G.png");
 }
 
 function setup() {
     createCanvas(256,256);
     player = createSprite(width/2, height-(playerImage.height/2), 0, 0);
     player.addImage(playerImage);
-    enemy = createSprite(width/2, 0, 0, 0);
-    enemy.addImage(enemyImage);
-    enemy.rotationSpeed = 4.0;
+    enemy1 = createSprite(width/2, 0, 0, 0);
+    enemy1.addImage(enemy1Image);
+    enemy1.rotationSpeed = 4.0;
     isGameOver = false;
 }
 
@@ -34,17 +33,17 @@ function draw() {
          player.position.x -= 2;
     }
     
-    enemy.position.y = enemy.position.y + 3;
+    enemy1.position.y = enemy1.position.y + 3;
     
-    if (enemy.position.y > height) {
-         enemy.position.y = 0;
-         enemy.position.x = random(5, width-5);
+    if (enemy1.position.y > height) {
+         enemy1.position.y = 0;
+         enemy1.position.x = random(5, width-5);
     }
     
     drawSprites();
     
     function gameOver() {
-        enemy.position.y = 0;
+        enemy1.position.y = 0;
         background(0);
         textAlign(CENTER);
         fill("white");
@@ -61,7 +60,7 @@ function draw() {
     if (isGameOver) {
         gameOver();
     } else {
-        if (enemy.overlap(player)) {
+        if (enemy1.overlap(player)) {
             isGameOver = true;
         } else {
             textFont("Consolas");
@@ -71,7 +70,7 @@ function draw() {
         }
     }
     
-        if (enemy.position.y >= 255) {
+        if (enemy1.position.y >= 255) {
             score++;
         }
 }
@@ -81,8 +80,8 @@ function mouseClicked() {
         isGameOver = false;
         player.position.x = width/2;
         player.position.y = height-(playerImage.height/2);
-        enemy.position.x = width/2;
-        enemy.position.y = 0;
+        enemy1.position.x = width/2;
+        enemy1.position.y = 0;
         score = 0;
     }
 }
@@ -93,8 +92,8 @@ function keyPressed() {
             isGameOver = false;
             player.position.x = width/2;
             player.position.y = height-(playerImage.height/2);
-            enemy.position.x = width/2;
-            enemy.position.y = 0;
+            enemy1.position.x = width/2;
+            enemy1.position.y = 0;
             score = 0;
         }
    } 
