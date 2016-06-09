@@ -7,7 +7,7 @@ var score = 0;
 
 function preload() {
     playerImage = loadImage("https://surrogate.hackedu.us/i.imgur.com/N5uCbDu.png");
-    enemyImage = loadImage("http://s33.postimg.org/dtl1scncv/rsz_1tumblr_inline_n5ognguvwi1qaxzsh.png");
+    enemyImage = loadImage("https://surrogate.hackedu.us/i.imgur.com/OdL0XPt.png");
     backgroundImage = loadImage("https://surrogate.hackedu.us/i.imgur.com/aKQOg3G.png");
     //https://surrogate.hackedu.us/i.imgur.com/aKQOg3G.png");
 }
