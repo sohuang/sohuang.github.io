@@ -9,13 +9,25 @@ body {
     align-items: center;
 }
 
-@font-face {
-    font-family: '8BITWONDERNominal';
-    src: url('8-bit_wonder-webfont.eot');
-    src: url('8-bit_wonder-webfont.eot?#iefix') format('embedded-opentype'),
-         url('8-bit_wonder-webfont.woff') format('woff'),
-         url('8-bit_wonder-webfont.ttf') format('truetype'),
-         url('8-bit_wonder-webfont.svg#8BITWONDERNominal') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
+/*@font-face {*/
+/*    font-family: '8BITWONDERNominal';*/
+/*    src: url('8-bit_wonder-webfont.eot');*/
+/*    src: url('8-bit_wonder-webfont.eot?#iefix') format('embedded-opentype'),*/
+/*         url('8-bit_wonder-webfont.woff') format('woff'),*/
+/*         url('8-bit_wonder-webfont.ttf') format('truetype'),*/
+/*         url('8-bit_wonder-webfont.svg#8BITWONDERNominal') format('svg');*/
+/*    font-weight: normal;*/
+/*    font-style: normal;*/
+/*}*/
+
+/*#levels ul {*/
+/*    position: absolute;*/
+/*    margin: 0;*/
+/*    padding: 0;*/
+/*    list-style-type: none;*/
+/*    text-align: center;*/
+/*}*/
+
+/*#levels ul li {*/
+/*    display: inline;*/
+/*}*/

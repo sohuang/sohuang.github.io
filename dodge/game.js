@@ -7,8 +7,9 @@ var score = 0;
 
 function preload() {
     playerImage = loadImage("https://surrogate.hackedu.us/i.imgur.com/N5uCbDu.png");
-    enemyImage = loadImage("https://surrogate.hackedu.us/i.imgur.com/OdL0XPt.png");
+    enemyImage = loadImage("http://s33.postimg.org/dtl1scncv/rsz_1tumblr_inline_n5ognguvwi1qaxzsh.png");
     backgroundImage = loadImage("https://surrogate.hackedu.us/i.imgur.com/aKQOg3G.png");
+    //https://surrogate.hackedu.us/i.imgur.com/aKQOg3G.png");
 }
 
 function setup() {
@@ -23,21 +24,21 @@ function setup() {
 
 
 function draw() {
-    background(backgroundImage);        
+    background(backgroundImage);
     
     if (keyDown(RIGHT_ARROW) && player.position.x < (width - (playerImage.width/2))) {
-        player.position.x += 2;
+         player.position.x += 2;
     }
     
     if (keyDown(LEFT_ARROW) && player.position.x > (playerImage.width/2)) {
-        player.position.x -= 2;
+         player.position.x -= 2;
     }
     
     enemy.position.y = enemy.position.y + 3;
     
     if (enemy.position.y > height) {
-        enemy.position.y = 0;
-        enemy.position.x = random(5, width-5);
+         enemy.position.y = 0;
+         enemy.position.x = random(5, width-5);
     }
     
     drawSprites();
@@ -75,8 +76,6 @@ function draw() {
         }
 }
 
-
-
 function mouseClicked() {
     if (isGameOver) {
         isGameOver = false;
@@ -100,7 +99,6 @@ function keyPressed() {
         }
    } 
 }
-
 
     
   
