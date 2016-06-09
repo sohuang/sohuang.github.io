@@ -45,7 +45,7 @@ function draw() {
         textAlign(CENTER);
         fill("white");
         text("Game Over!", width/2, height/2);
-        text("Click anywhere to try again", width/2, 3*height/4);
+        text("Click anywhere or press 'Enter' to try again", width/2, 3*height/4);
     }
 
     if (isGameOver) {
@@ -66,3 +66,16 @@ function mouseClicked() {
         enemy.position.y = 0;
     }
 }
+
+function keyPressed() {
+   if (keyDown(ENTER)) {
+       if (isGameOver) {
+            isGameOver = false;
+            player.position.x = width/2;
+            player.position.y = height-(playerImage.height/2);
+            enemy.position.x = width/2;
+            enemy.position.y = 0;
+        }
+   } 
+}
+
