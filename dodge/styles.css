@@ -7,6 +7,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-image: url("http://67.media.tumblr.com/436f1a53aea9bea528c10f92464a07fb/tumblr_mvywoc05Ff1t0hbvno1_100.png");
+    background-repeat: repeat;
 }
 
 /*@font-face {*/
