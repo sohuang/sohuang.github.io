@@ -3,6 +3,7 @@ var playerImage;
 var enemy;
 var enemyImage;
 var backgroundImage;
+var score = 0;
 
 function preload() {
     playerImage = loadImage("https://surrogate.hackedu.us/i.imgur.com/N5uCbDu.png");
@@ -19,6 +20,7 @@ function setup() {
     enemy.rotationSpeed = 4.0;
     isGameOver = false;
 }
+
 
 function draw() {
     background(backgroundImage);        
@@ -41,11 +43,18 @@ function draw() {
     drawSprites();
     
     function gameOver() {
+        enemy.position.y = 0;
         background(0);
         textAlign(CENTER);
         fill("white");
-        text("Game Over!", width/2, height/2);
-        text("Click anywhere or press 'Enter' to try again", width/2, 3*height/4);
+        textFont("Consolas");
+        textSize(25);
+        text("Game Over!", width/2, height/4);
+        textSize(12);
+        text("Your score: " + score, width/2, height/2);
+        text("Click anywhere", width/2, 13*height/18);
+        text("or press 'Enter'", width/2, 14*height/18);
+        text("to try again", width/2, 15*height/18);
     }
 
     if (isGameOver) {
@@ -53,9 +62,20 @@ function draw() {
     } else {
         if (enemy.overlap(player)) {
             isGameOver = true;
+        } else {
+            textFont("Consolas");
+            fill("white");
+            textAlign(RIGHT,TOP);
+            text("Score: " + score, 250, 5);
         }
     }
+    
+        if (enemy.position.y >= 255) {
+            score++;
+        }
 }
+
+
 
 function mouseClicked() {
     if (isGameOver) {
@@ -64,6 +84,7 @@ function mouseClicked() {
         player.position.y = height-(playerImage.height/2);
         enemy.position.x = width/2;
         enemy.position.y = 0;
+        score = 0;
     }
 }
 
@@ -75,7 +96,11 @@ function keyPressed() {
             player.position.y = height-(playerImage.height/2);
             enemy.position.x = width/2;
             enemy.position.y = 0;
+            score = 0;
         }
    } 
 }
 
+
+    
+  
