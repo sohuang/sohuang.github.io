@@ -5,26 +5,56 @@
 .kanye {
     width: 200px;
 }
+
 body {
     text-align: center;
     font-family: 'comicsans', "Comic Sans MS", sans-serif;
     
     background-image: url("http://67.media.tumblr.com/e70a0da214e04e0451d7fdbe92bea124/tumblr_inline_mtjp9xxvC81s9mv75.png");
     background-repeat: repeat;
-    
 }
-ul {
-    margin: 0px;
+
+h1 {
+    color: white;
+    text-shadow: 1px 1px 0px #461a2c;
+}
+
+p {
+    color: white;
+    text-shadow: 1px 1px 0px #461a2c;
+}
+
+#links{
     padding: 0px;
-    list-style-type: none;
 }
-#navlist li {
-    position: absolute;
+
+#links li {
     list-style: inline;
-    padding-right: 10px;
-    bottom: 10px;
+    display: inline-block;
+    list-style-type: none;
+    font-family: Consolas, monaco, monospace;
+}
+
+#links ul {
     text-align: center;
 }
-li:lastchild {
-    border-bottom: none;
+
+#navlist {
+    padding: 0px;
 }
+
+#navlist li {
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    list-style: inline;
+    bottom: 10px;
+    display: inline-block;
+}
+
+#navlist ul {
+    text-align: center;
+}
+
