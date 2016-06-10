@@ -9,6 +9,16 @@ var obstacleSprites;
 var isGameOver;
 var score;
 
+var newStyle = document.createElement('style');
+newStyle.appendChild(document.createTextNode("\
+@font-face {\
+    font-family: 'silksreen';\
+    src: url('web fonts\ silkscreen_normal_macroman\ slkscr-webfont.eot') format(WOFF);\
+}\
+"));
+document.head.appendChild(newStyle);
+    
+
 function setup() {
     isGameOver = false;
     score = 0;
@@ -33,8 +43,13 @@ function draw() {
         background(0);
         fill(255);
         textAlign(CENTER);
-        text("Your score was: " + score, camera.position.x, camera.position.y -20);
-        text("Game Over! Click anywhere to restart", camera.position.x, camera.position.y);
+        textFont("silkscreen");
+        textSize(40);
+        text("Game Over!", camera.position.x, camera.position.y - 85);
+        textSize(20);
+        text("Your score was: " + score, camera.position.x, camera.position.y - 40);
+        textSize(15);
+        text("Click or press space to restart", camera.position.x, camera.position.y + 100);
     } else {
         background (150, 200, 250);
         player.velocity.y = player.velocity.y + GRAVITY;
@@ -81,6 +96,26 @@ function draw() {
 
 function endGame() {
     isGameOver = true;
+}
+
+document.body.onkeyup = function(e) {
+    if (e.keyCode == 32) {
+        if (isGameOver) {
+            for (var n = 0; n < numGroundSprites; n++) {
+                var groundSprite = groundSprites[n];
+                groundSprite.position.x = n*50;
+            }
+            
+            player.position.x = 100;
+            player.position.y = height-75;
+            
+            obstacleSprites.removeSprites();
+            
+            if (isGameOver) {
+                isGameOver = false;
+            }
+        }
+    }
 }
 
 function mouseClicked() {

@@ -1,7 +1,11 @@
 @font-face {
     font-family: 'comicsans';
     src: url('https://preview.c9users.io/sophieh/projects/911Fonts.com_ComicSansMSRegular__-_911fonts.com-fonts-BpCS.ttf');
+    
+    font-family: 'silkscreen';
+    src: url('web fonts/ silkscreen_normal_macroman/ slkscr-webfont.eot');
 }
+
 .kanye {
     width: 200px;
 }
