@@ -8,4 +8,39 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: 'lemons can fly';
+    color: white;
+}
+
+.big {
+    font-size: 40px;
+}
+
+.smol {
+    font-size: 30px;
+}
+
+#instructions {
+    position: fixed;
+    top: 200px;
+    bottom: 200px;
+    right: 175px;
+    width: 150px;
+    height: 300px;
+    margin: 20px;
+}
+
+#instructionss {
+    position: fixed;
+    top: 250px;
+    right: 175px;
+    width: 150px;
+    height: 200px;
+    margin: 20px;
+    text-align: justify;
+}
+
+@font-face {
+    font-family: 'lemons can fly';
+    src: url('Lemons Can Fly.ttf');
 }

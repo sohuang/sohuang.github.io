@@ -12,7 +12,7 @@ var score;
 var groundImage;
 var gameOverImage;
 var pointSprites;
-var pointSpritesImage;
+var pointSpritesImages;
 var obstacleImages;
 var randomIndex;
 var img;
@@ -37,6 +37,10 @@ function preload() {
     bgImage = loadImage("bgImage.png");
     point1 = loadGif("point1.gif");
     point2 = loadGif("point2.gif");
+    point3 = loadGif("point3.gif");
+    point4 = loadGif("point4.gif");
+    point5 = loadGif("point5.gif");
+    pointSpritesImages = [point1, point2, point3, point4, point5];
 }
 
 function getRandomImage(array) {
@@ -84,7 +88,7 @@ function draw() {
         text("Click or press space to restart", camera.position.x, camera.position.y + 100);
         image(gameOverImage, camera.position.x - 56, camera.position.y - 10);
     } else {
-        background (150, 200, 250);
+        background (28, 36, 72);
         player.velocity.y = player.velocity.y + GRAVITY;
         
         if (groundSprites.overlap(player)) {
@@ -119,10 +123,10 @@ function draw() {
         
         obstacleSprites.overlap(player, endGame);
         
-        if (random() > 0.999) {
+        if (random() > 0.99) {
             var point = createSprite(camera.position.x + width, random(0, (height-50) - 15), 30, 30);
             pointSprites.add(point);
-            point.addImage(point1);
+            point.addImage(getRandomImage(pointSpritesImages));
         }
         
         var firstPointSprite = pointSprites[0];
