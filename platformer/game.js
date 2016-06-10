@@ -8,6 +8,8 @@ var player;
 var obstacleSprites;
 var isGameOver;
 var score;
+var groundImage;
+var gameOverImage;
 
 var newStyle = document.createElement('style');
 newStyle.appendChild(document.createTextNode("\
@@ -18,6 +20,9 @@ newStyle.appendChild(document.createTextNode("\
 "));
 document.head.appendChild(newStyle);
     
+function preload() {
+    groundImage = loadImage("bricksx50.png");
+}
 
 function setup() {
     isGameOver = false;
@@ -26,11 +31,13 @@ function setup() {
     createCanvas(400, 300);
     background(150, 200, 250);
     groundSprites = new Group();
+    gameOverImage = loadGif("gameOverImage.gif");
     
     numGroundSprites = width/GROUND_SPRITE_WIDTH + 1;
     for (var n = 0; n < numGroundSprites; n++) {
         var groundSprite = createSprite(n*50, height-25, GROUND_SPRITE_WIDTH, GROUND_SPRITE_HEIGHT);
         groundSprites.add(groundSprite);
+        groundSprite.addImage(groundImage);
     }
     
     player = createSprite(100, height-75, 50, 50);
@@ -50,6 +57,7 @@ function draw() {
         text("Your score was: " + score, camera.position.x, camera.position.y - 40);
         textSize(15);
         text("Click or press space to restart", camera.position.x, camera.position.y + 100);
+        image(gameOverImage, camera.position.x - 56, camera.position.y - 10);
     } else {
         background (150, 200, 250);
         player.velocity.y = player.velocity.y + GRAVITY;
@@ -90,7 +98,8 @@ function draw() {
         
         score = score + 1;
         textAlign(CENTER);
-        text(score, camera.position.x, 10);
+        textFont('silkscreen');
+        text("Score: " + score, camera.position.x, 15);
     }
 }
 
