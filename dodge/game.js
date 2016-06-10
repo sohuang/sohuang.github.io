@@ -4,6 +4,7 @@ var enemy1;
 var enemy1Image;
 var backgroundImage;
 var score = 0;
+var bubble;
 
 function preload() {
     playerImage = loadImage("https://surrogate.hackedu.us/i.imgur.com/N5uCbDu.png");
@@ -13,6 +14,7 @@ function preload() {
 
 function setup() {
     createCanvas(256,256);
+    bubble = loadImage("http://l.wigflip.com/XSitsxs8/wigflip-ds.png");
     player = createSprite(width/2, height-(playerImage.height/2), 0, 0);
     player.addImage(playerImage);
     enemy1 = createSprite(width/2, 0, 0, 0);
@@ -24,6 +26,8 @@ function setup() {
 
 function draw() {
     background(backgroundImage);
+    
+    image(bubble, 40*width/100, 45*height/100);
     
     if (keyDown(RIGHT_ARROW) && player.position.x < (width - (playerImage.width/2))) {
          player.position.x += 2;
