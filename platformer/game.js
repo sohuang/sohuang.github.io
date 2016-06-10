@@ -5,11 +5,18 @@ var numGroundSprites;
 var GRAVITY = 0.3;
 var JUMP = -5;
 var player;
+var playerImage;
 var obstacleSprites;
 var isGameOver;
 var score;
 var groundImage;
 var gameOverImage;
+var pointSprites;
+var pointSpritesImage;
+var obstacleImages;
+var randomIndex;
+var img;
+var bgImage;
 
 var newStyle = document.createElement('style');
 newStyle.appendChild(document.createTextNode("\
@@ -19,9 +26,21 @@ newStyle.appendChild(document.createTextNode("\
 }\
 "));
 document.head.appendChild(newStyle);
-    
+
 function preload() {
-    groundImage = loadImage("bricksx50.png");
+    obstacle1 = loadGif("obstacle1.gif");
+    obstacle2 = loadGif("obstacle2.gif");
+    obstacle3 = loadGif("obstacle3.gif");
+    obstacle4 = loadGif("obstacle4.gif");
+    obstacleImages = [obstacle1, obstacle2, obstacle3, obstacle4];
+    playerImage = loadGif("player.gif");
+    bgImage = loadImage("bgImage.png");
+}
+
+function getRandomImage(array) {
+    randomIndex = Math.floor(Math.random() * array.length);
+    img = array[randomIndex];
+    return img;
 }
 
 function setup() {
@@ -32,6 +51,7 @@ function setup() {
     background(150, 200, 250);
     groundSprites = new Group();
     gameOverImage = loadGif("gameOverImage.gif");
+    groundImage = loadImage("platformertiles1.png");
     
     numGroundSprites = width/GROUND_SPRITE_WIDTH + 1;
     for (var n = 0; n < numGroundSprites; n++) {
@@ -40,7 +60,8 @@ function setup() {
         groundSprite.addImage(groundImage);
     }
     
-    player = createSprite(100, height-75, 50, 50);
+    player = createSprite(100, height-70, 36, 41);
+    player.addImage(playerImage);
     
     obstacleSprites = new Group();
 }
@@ -64,15 +85,14 @@ function draw() {
         
         if (groundSprites.overlap(player)) {
             player.velocity.y = 0;
-            player.position.y = (height-50) - (player.height/2);
-            // player.position.y = (height-75);
+            player.position.y = height-70;
         }
         
         if (keyDown(UP_ARROW)) {
             player.velocity.y = JUMP;
         }
         
-        player.position.x = player.position.x + 5;
+        player.position.x = player.position.x + 3;
         camera.position.x = player.position.x + (width/4);
         
         var firstGroundSprite = groundSprites[0];
@@ -82,9 +102,10 @@ function draw() {
             groundSprites.add(firstGroundSprite);
         }
         
-        if (random() > 0.95) {
+        if (random() > 0.98) {
             var obstacle = createSprite(camera.position.x + width, random(0, (height-50) - 15), 30, 30 );
             obstacleSprites.add(obstacle);
+            obstacle.addImage(getRandomImage(obstacleImages));
         }
         
         var firstObstacle = obstacleSprites[0];
@@ -99,6 +120,7 @@ function draw() {
         score = score + 1;
         textAlign(CENTER);
         textFont('silkscreen');
+        fill(255);
         text("Score: " + score, camera.position.x, 15);
     }
 }
@@ -116,7 +138,7 @@ document.body.onkeyup = function(e) {
             }
             
             player.position.x = 100;
-            player.position.y = height-75;
+            player.position.y = height-90;
             
             obstacleSprites.removeSprites();
             
@@ -135,7 +157,7 @@ function mouseClicked() {
         }
         
         player.position.x = 100;
-        player.position.y = height-75;
+        player.position.y = height-90;
         
         obstacleSprites.removeSprites();
         
