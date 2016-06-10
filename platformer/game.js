@@ -157,6 +157,8 @@ document.body.onkeyup = function(e) {
             player.position.x = 100;
             player.position.y = height-90;
             
+            score = 0;
+            
             obstacleSprites.removeSprites();
             pointSprites.removeSprites();
             
@@ -176,6 +178,8 @@ function mouseClicked() {
         
         player.position.x = 100;
         player.position.y = height-90;
+        
+        score = 0;
         
         obstacleSprites.removeSprites();
         
