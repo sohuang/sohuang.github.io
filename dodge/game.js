@@ -30,11 +30,15 @@ function draw() {
     image(bubble, 40*width/100, 45*height/100);
     
     if (keyDown(RIGHT_ARROW) && player.position.x < (width - (playerImage.width/2))) {
-         player.position.x += 2;
+         player.position.x += 2.5;
     }
     
     if (keyDown(LEFT_ARROW) && player.position.x > (playerImage.width/2)) {
-         player.position.x -= 2;
+         player.position.x -= 2.5;
+    }
+    
+    if (keyDown(UP_ARROW) && player.position.y > (playerImage.height/2)) {
+        player.position.y -= 2.5;
     }
     
     enemy1.position.y = enemy1.position.y + 3;
