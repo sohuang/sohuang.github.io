@@ -35,6 +35,8 @@ function preload() {
     obstacleImages = [obstacle1, obstacle2, obstacle3, obstacle4];
     playerImage = loadGif("player.gif");
     bgImage = loadImage("bgImage.png");
+    point1 = loadGif("point1.gif");
+    point2 = loadGif("point2.gif");
 }
 
 function getRandomImage(array) {
@@ -64,6 +66,8 @@ function setup() {
     player.addImage(playerImage);
     
     obstacleSprites = new Group();
+    
+    pointSprites = new Group();
 }
 
 function draw() {
@@ -115,6 +119,19 @@ function draw() {
         
         obstacleSprites.overlap(player, endGame);
         
+        if (random() > 0.999) {
+            var point = createSprite(camera.position.x + width, random(0, (height-50) - 15), 30, 30);
+            pointSprites.add(point);
+            point.addImage(point1);
+        }
+        
+        var firstPointSprite = pointSprites[0];
+        if (pointSprites.length > 0 && firstPointSprite.position.x <= camera.position.x - (width/2 + firstPointSprite.width/2)) {
+            removeSprite(firstPointSprite);
+        }
+        
+        pointSprites.overlap(player, points);
+        
         drawSprites();
         
         score = score + 1;
@@ -141,6 +158,7 @@ document.body.onkeyup = function(e) {
             player.position.y = height-90;
             
             obstacleSprites.removeSprites();
+            pointSprites.removeSprites();
             
             if (isGameOver) {
                 isGameOver = false;
@@ -165,4 +183,9 @@ function mouseClicked() {
             isGameOver = false;
         }
     }
+}
+
+function points(point) {
+    score += 5;
+    point.remove();
 }
