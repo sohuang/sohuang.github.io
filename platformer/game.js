@@ -88,7 +88,7 @@ function draw() {
         text("Click or press space to restart", camera.position.x, camera.position.y + 100);
         image(gameOverImage, camera.position.x - 56, camera.position.y - 10);
     } else {
-        background (28, 36, 72);
+        background (28, 36, 74);
         player.velocity.y = player.velocity.y + GRAVITY;
         
         if (groundSprites.overlap(player)) {
@@ -138,7 +138,10 @@ function draw() {
         
         drawSprites();
         
-        score = score + 1;
+        if (obstacle.position.x < player.position.x) {
+            score++;
+        }
+        
         textAlign(CENTER);
         textFont('silkscreen');
         fill(255);
