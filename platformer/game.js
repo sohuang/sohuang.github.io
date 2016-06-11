@@ -22,7 +22,9 @@ var newStyle = document.createElement('style');
 newStyle.appendChild(document.createTextNode("\
 @font-face {\
     font-family: 'silksreen';\
-    src: url('web fonts\ silkscreen_normal_macroman\ slkscr-webfont.eot') format(WOFF);\
+    src: url('web fonts\ silkscreen_normal_macroman\ slkscr-webfont.eot') format(eot);\
+    src: url('web fonts\ silkscreen_normal_macroman\ slkscr-webfont.woff') format(WOFF);\
+    src: url('web fonts\ silkscreen_normal_macroman\ slkscr-webfont.ttf') format(ttf);\
 }\
 "));
 document.head.appendChild(newStyle);
