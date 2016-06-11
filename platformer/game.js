@@ -138,10 +138,7 @@ function draw() {
         
         drawSprites();
         
-        if (obstacle.position.x < player.position.x) {
-            score++;
-        }
-        
+        score = score + 1;
         textAlign(CENTER);
         textFont('silkscreen');
         fill(255);
