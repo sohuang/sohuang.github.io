@@ -18,17 +18,6 @@ var randomIndex;
 var img;
 var bgImage;
 
-var newStyle = document.createElement('style');
-newStyle.appendChild(document.createTextNode("\
-@font-face {\
-    font-family: 'silksreen';\
-    src: url('web fonts\ silkscreen_normal_macroman\ slkscr-webfont.eot') format(eot);\
-    src: url('web fonts\ silkscreen_normal_macroman\ slkscr-webfont.woff') format(WOFF);\
-    src: url('web fonts\ silkscreen_normal_macroman\ slkscr-webfont.ttf') format(truetype);\
-}\
-"));
-document.head.appendChild(newStyle);
-
 function preload() {
     obstacle1 = loadGif("obstacle1.gif");
     obstacle2 = loadGif("obstacle2.gif");
@@ -43,6 +32,7 @@ function preload() {
     point4 = loadGif("point4.gif");
     point5 = loadGif("point5.gif");
     pointSpritesImages = [point1, point2, point3, point4, point5];
+    silkscreen = loadFont("web fonts/silkscreen_normal_macroman/slkscr-webfont.ttf");
 }
 
 function getRandomImage(array) {
