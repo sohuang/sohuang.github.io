@@ -24,7 +24,7 @@ newStyle.appendChild(document.createTextNode("\
     font-family: 'silksreen';\
     src: url('web fonts\ silkscreen_normal_macroman\ slkscr-webfont.eot') format(eot);\
     src: url('web fonts\ silkscreen_normal_macroman\ slkscr-webfont.woff') format(WOFF);\
-    src: url('web fonts\ silkscreen_normal_macroman\ slkscr-webfont.ttf') format(ttf);\
+    src: url('web fonts\ silkscreen_normal_macroman\ slkscr-webfont.ttf') format(truetype);\
 }\
 "));
 document.head.appendChild(newStyle);
