@@ -71,7 +71,7 @@ function draw() {
         background(0);
         fill(255);
         textAlign(CENTER);
-        textFont("silkscreen");
+        textFont(silkscreen);
         textSize(40);
         text("Game Over!", camera.position.x, camera.position.y - 85);
         textSize(20);
@@ -132,7 +132,7 @@ function draw() {
         
         score = score + 1;
         textAlign(CENTER);
-        textFont('silkscreen');
+        textFont(silkscreen);
         fill(255);
         text("Score: " + score, camera.position.x, 15);
     }
