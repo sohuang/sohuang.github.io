@@ -32,7 +32,7 @@ function preload() {
     point4 = loadGif("point4.gif");
     point5 = loadGif("point5.gif");
     pointSpritesImages = [point1, point2, point3, point4, point5];
-    silkscreen = loadFont("web fonts/silkscreen_normal_macroman/slkscr-webfont.ttf");
+    silkscreen = loadFont("slkscr-webfont.ttf");
 }
 
 function getRandomImage(array) {
