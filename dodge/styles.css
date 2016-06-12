@@ -10,12 +10,3 @@ body {
     background-image: url("http://67.media.tumblr.com/tumblr_me8agzSSsD1rajxch.png");
     background-repeat: repeat;
 }
-
-@font-face { 
-	font-family: 'MyWebFont';
-	src: url('WebFont.eot');
-	src: url('WebFont.eot?#iefix') format('embedded-opentype'),
-	     url('WebFont.woff') format('woff'),
-	     url('WebFont.ttf') format('truetype'),
-	     url('WebFont.svg#webfont') format('svg');
-}
