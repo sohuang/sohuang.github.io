@@ -1,3 +1,4 @@
+var canvas;
 var player;
 var playerImage;
 var enemy1;
@@ -13,7 +14,8 @@ function preload() {
 }
 
 function setup() {
-    createCanvas(256,256);
+    canvas = createCanvas(256, 256);
+    canvas.parent('sketch-holder');
     bubble = loadImage("http://l.wigflip.com/XSitsxs8/wigflip-ds.png");
     player = createSprite(width/2, height-(playerImage.height/2), 0, 0);
     player.addImage(playerImage);

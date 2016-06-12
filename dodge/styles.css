@@ -10,3 +10,17 @@ body {
     background-image: url("http://67.media.tumblr.com/tumblr_me8agzSSsD1rajxch.png");
     background-repeat: repeat;
 }
+
+#sketch-holder {
+    position: relative;
+    margin: 0 auto;
+    width: 256px;
+    height: 256px;
+}
+
+#myimage {
+    position: absolute;
+    width: 75px;
+    height: 60px;
+    left: 158px;
+}
