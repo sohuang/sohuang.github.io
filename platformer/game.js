@@ -25,7 +25,6 @@ function preload() {
     obstacle3 = loadGif("obstacle3.gif");
     obstacle4 = loadGif("obstacle4.gif");
     obstacleImages = [obstacle1, obstacle2, obstacle3, obstacle4];
-    playerImage = loadGif("player.gif");
     bgImage = loadImage("bgImage.png");
     point1 = loadGif("point1.gif");
     point2 = loadGif("point2.gif");
@@ -34,6 +33,7 @@ function preload() {
     point5 = loadGif("point5.gif");
     pointSpritesImages = [point1, point2, point3, point4, point5];
     silkscreen = loadFont("slkscr-webfont.ttf");
+    playerImage = loadGif("player.gif");
 }
 
 function getRandomImage(array) {

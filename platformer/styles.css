@@ -3,11 +3,12 @@ html, body {
 }
 
 body {
-    background-color: black;
     margin: 0;
     display: flex;
     justify-content: center;
     align-items: center;
+    
+    background-color: black;
     font-family: 'lemons can fly';
     color: white;
 }
@@ -20,24 +21,27 @@ body {
     font-size: 30px;
 }
 
-#instructions {
-    position: fixed;
-    top: 200px;
-    bottom: 200px;
-    right: 175px;
-    width: 150px;
+#sketch-holder {
+    position: relative;
+    margin: 0 auto;
+    width: 400px;
     height: 300px;
-    margin: 20px;
+}
+
+#instructions {
+    position: absolute;
+    width: 150px;
+    height: 50px;
+    right: -170px;
 }
 
 #instructionss {
-    position: fixed;
-    top: 250px;
-    right: 175px;
+    position: absolute;
     width: 150px;
     height: 200px;
-    margin: 20px;
-    text-align: justify;
+    text-align: center;
+    right: -170px;
+    top: 40px;
 }
 
 @font-face {
