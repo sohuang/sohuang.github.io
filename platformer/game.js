@@ -3,7 +3,7 @@ var groundSprites;
 var GROUND_SPRITE_WIDTH = 50;
 var GROUND_SPRITE_HEIGHT = 50;
 var numGroundSprites;
-var GRAVITY = 0.3;
+var GRAVITY = 0.4;
 var JUMP = -5;
 var player;
 var playerImage;
@@ -158,7 +158,7 @@ document.body.onkeyup = function(e) {
             }
             
             player.position.x = 100;
-            player.position.y = height-90;
+            player.position.y = height-70;
             
             score = 0;
             
@@ -180,7 +180,7 @@ function mouseClicked() {
         }
         
         player.position.x = 100;
-        player.position.y = height-90;
+        player.position.y = height-70;
         
         score = 0;
         
