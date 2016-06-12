@@ -91,6 +91,10 @@ function draw() {
             player.position.y = height-70;
         }
         
+        if (player.position.y <= (player.height/2)) {
+            player.position.y = player.height/2;
+        }
+        
         if (keyDown(UP_ARROW)) {
             player.velocity.y = JUMP;
         }
