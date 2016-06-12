@@ -1,3 +1,4 @@
+var canvas;
 var groundSprites;
 var GROUND_SPRITE_WIDTH = 50;
 var GROUND_SPRITE_HEIGHT = 50;
@@ -45,7 +46,9 @@ function setup() {
     isGameOver = false;
     score = 0;
     
-    createCanvas(400, 300);
+    canvas = createCanvas(400, 300);
+    canvas.parent('sketch-holder');
+
     background(150, 200, 250);
     groundSprites = new Group();
     gameOverImage = loadGif("gameOverImage.gif");
