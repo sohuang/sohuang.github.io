@@ -4,35 +4,37 @@
 }
 
 @font-face {
-     font-family: 'csb';
-     src: url('csb.ttf');
+     font-family: 'tex';
+     src: url('texgyreschola-regular.otf');
 }
 
 body {
      margin: 50px;
 }
 
-
-
 .new-note * {
      display: block;
 }
 
 .new-note {
-     padding:10px;
+     padding: 10px;
 }
 
 .note-title {
-     font-family: tw;
+     font-family: 'tw';
      margin-bottom: 0;
 }
 
 .note-date {
      font-style: italic;
-     font-family: csb;
+     font-family: 'tex';
+     font-size: 12px;
      margin-top: 0;
+     margin-bottom: 5px;
 }
 
 .note-content {
-     font-family: tw;
+     font-family: 'tw';
+     margin-top: 5px;
+     padding-bottom: 10px;
 }
