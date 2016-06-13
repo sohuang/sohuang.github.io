@@ -11,8 +11,8 @@ function postNewNote() {
      
      var noteTitle = titleInput.val();
      var noteContent = contentInput.val();
-     var noteDate = new Date();
-     
+     var noteDate = moment().format("dddd, MMMM Do YYYY, h:mm a");
+
      var note = {};
      note.title = noteTitle;
      note.content = noteContent;
