@@ -1,0 +1,38 @@
+@font-face {
+     font-family: 'tw';
+     src: url('tw.ttf');
+}
+
+@font-face {
+     font-family: 'csb';
+     src: url('csb.ttf');
+}
+
+body {
+     margin: 50px;
+}
+
+
+
+.new-note * {
+     display: block;
+}
+
+.new-note {
+     padding:10px;
+}
+
+.note-title {
+     font-family: tw;
+     margin-bottom: 0;
+}
+
+.note-date {
+     font-style: italic;
+     font-family: csb;
+     margin-top: 0;
+}
+
+.note-content {
+     font-family: tw;
+}
