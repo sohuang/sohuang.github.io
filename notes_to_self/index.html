@@ -3,17 +3,18 @@
      <head>
           <title>Notes to Self</title>
           <link rel="stylesheet" href="styles.css">
+          <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css">
      </head>
      
      <body>
           <div class="new-note">
-               <input type="text" placeholder="Note Title" class="new-note-title">
-               <textarea placeholder="Note Text" class="new-note-content"></textarea>
-               <button class="post-new-note">Post Note</button>
+               <div><input type="text" placeholder="Note Title" class="new-note-title"></div>
+               <div><textarea placeholder="Note Text" class="new-note-content"></textarea></div>
+               <div><button id="postButton" class="post-new-note">Post Note</button></div>
           </div>
           
           <div class="old-notes"></div>
-          
+
           <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js"></script>
           <script src="main.js"></script>
      </body>

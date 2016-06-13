@@ -40,11 +40,20 @@ function displayNotes() {
           var noteTitleDisplay = $("<h2>").addClass("note-title").text(noteTitle);
           var noteDateDisplay = $("<p>").addClass("note-date").text(noteDate);
           var noteContentDisplay = $("<p>").addClass("note-content").html(noteContent);
+          var deleteButton = $("<input/>").addClass("delete-old-note").attr({type: "button", value: "Clear"});
           
           thisNote.append(noteTitleDisplay);
           thisNote.append(noteDateDisplay);
           thisNote.append(noteContentDisplay);
+          thisNote.append(deleteButton);
           
           $(".old-notes").append(thisNote);
      }
 }
+
+function deleteNote() {
+     localStorage.removeItem("notes", JSON.stringify([]));
+     location.reload();
+}
+
+$(".delete-old-note").on("click", deleteNote);

@@ -5,24 +5,58 @@
 
 @font-face {
      font-family: 'tex';
-     src: url('texgyreschola-regular.otf');
+     src: url('tex.otf');
 }
 
 body {
+     background-color: #74879E;
      margin: 50px;
+     font-family: 'tw';
 }
 
 .new-note * {
      display: block;
+     padding-top: 2px;
+     padding-bottom: 3px;
+     padding-right: 3px;
 }
 
 .new-note {
      padding: 10px;
+     border: 1px solid black;
+     width: 33.33%;
+     margin-bottom: 50px;
+}
+
+.new-note-title {
+     width: 100%;
+}
+
+.new-note-content {
+     width: 99.5%;
+}
+
+#postButton {
+     border-radius: 5px;
+}
+
+#deleteButton {
+     border-radius: 5px;
+}
+
+.old-notes {
+     border-color: white;
+     border-width: 100px;
+     border-radius: 5px;
+     background-color: white;
+     padding: 10px;
+     width: 33.33%;
 }
 
 .note-title {
      font-family: 'tw';
      margin-bottom: 0;
+     word-wrap: break-word;
 }
 
 .note-date {
@@ -36,5 +70,5 @@ body {
 .note-content {
      font-family: 'tw';
      margin-top: 5px;
-     padding-bottom: 10px;
+     word-wrap: break-word;
 }
