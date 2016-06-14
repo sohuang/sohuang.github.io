@@ -32,6 +32,7 @@ function displayNotes() {
      $(".old-notes").html("");
      for (var i = myNotes.length-1; i >=0; i--) {
           var note = myNotes[i];
+          var id = i;
           var noteTitle = note.title;
           var noteDate = note.date;
           var noteContent = note.content.replace(/\n/g,"<br>");
@@ -41,6 +42,7 @@ function displayNotes() {
           var noteDateDisplay = $("<p>").addClass("note-date").text(noteDate);
           var noteContentDisplay = $("<p>").addClass("note-content").html(noteContent);
           var deleteButton = $("<input/>").addClass("delete-old-note").attr({type: "button", value: "Clear"});
+          deleteButton.onclick(deleteNote)
           
           thisNote.append(noteTitleDisplay);
           thisNote.append(noteDateDisplay);
@@ -51,8 +53,12 @@ function displayNotes() {
      }
 }
 
-function deleteNote() {
-     localStorage.removeItem("notes", JSON.stringify([]));
+function deleteNote(id) {
+     var messages = JSON.parse(localStorage.getItem("notes"));
+     messages.splice(id, 1);
+     localStorage.setItem("notes", JSON.stringify(messages));
+     console.log(messages);
+     // localStorage.removeItem("notes", JSON.stringify([]));
      location.reload();
 }
 
