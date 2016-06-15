@@ -20,7 +20,7 @@ body {
 #sketch-holder {
      position: relative;
      margin: 0 auto;
-     width: 400px;
+     width: 600px;
      height: 400px;
 }
 
@@ -29,7 +29,7 @@ body {
      justify-content: center;
      align-items: center;
      top: -40px;
-     left: 66px;
+     left: 170px;
 }
 
 @-webkit-keyframes pulse {
@@ -42,6 +42,6 @@ body {
 
 #pageTitle {
      position: absolute;
-     left: 80px;
+     left: 180px;
      top: -130px;
 }
