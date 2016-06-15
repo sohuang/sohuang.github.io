@@ -56,7 +56,7 @@ body {
      border-width: 100px;
      border-radius: 5px;
      background-color: white;
-     opacity: 0.8;
+     /*opacity: 0.8;*/
      padding: 10px;
      width: 33.33%;
 }
