@@ -7,34 +7,37 @@ var config = {
 firebase.initializeApp(config);
 
 var pointsData = firebase.database().ref();
-
 var points = [];
 
 function setup() {
      var canvas = createCanvas(400, 400);
      canvas.parent('sketch-holder');
-     
      background(255);
-     fill(0);
      pointsData.on("child_added", function (point) {
           points.push(point.val());
      });
-     
      canvas.mousePressed(drawPoint);
      canvas.mouseMoved(drawPointIfMousePressed);
+     $("#colorPicker").spectrum({
+          preferredFormat: "hex",
+          showInitial: true,
+          showInput: true
+     });
 }
 
 function draw() {
      background(255);
-     
+     noStroke();
      for (var i = 0; i < points.length; i++) {
           var point = points[i];
+          fill(point.color);
           ellipse(point.x, point.y, 5, 5);
      }
 }
 
 function drawPoint() {
-     pointsData.push({x: mouseX, y: mouseY});
+     var selectedColor = $("#colorPicker").spectrum('get').toHexString();
+     pointsData.push({x: mouseX, y: mouseY, color: selectedColor});
 }
 
 function drawPointIfMousePressed() {
@@ -53,3 +56,4 @@ function clearDrawing() {
      pointsData.remove();
      points = [];
 }
+
