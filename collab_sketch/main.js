@@ -8,6 +8,7 @@ firebase.initializeApp(config);
 
 var pointsData = firebase.database().ref();
 var points = [];
+var slider;
 
 function setup() {
      var canvas = createCanvas(600, 400);
@@ -23,6 +24,8 @@ function setup() {
           showInitial: true,
           showInput: true
      });
+     slider = createSlider(1, 50, 5);
+     slider.parent('controlContainer');
 }
 
 function draw() {
