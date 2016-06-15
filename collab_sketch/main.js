@@ -34,13 +34,14 @@ function draw() {
      for (var i = 0; i < points.length; i++) {
           var point = points[i];
           fill(point.color);
-          ellipse(point.x, point.y, 5, 5);
+          ellipse(point.x, point.y, point.size, point.size);
      }
 }
 
 function drawPoint() {
      var selectedColor = $("#colorPicker").spectrum('get').toHexString();
-     pointsData.push({x: mouseX, y: mouseY, color: selectedColor});
+     
+     pointsData.push({x: mouseX, y: mouseY, color: selectedColor, size: slider.value()});
 }
 
 function drawPointIfMousePressed() {
