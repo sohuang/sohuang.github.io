@@ -11,6 +11,8 @@ body {
      margin: 0;
      display: flex;
      font-family: 'lemons can fly';
+     color: white;
+     text-shadow: 1px 1px 0px #000000;
      font-size: 30px;
      justify-content: center;
      align-items: center;
@@ -33,11 +35,11 @@ body {
 }
 
 @-webkit-keyframes pulse {
-     0% {background-color: #033F63;}
-     25% {background-color: #28666E;}
-     50% {background-color: #7C9885;}
-     75% {background-color: #B5B682;}
-     100% {background-color: #FEDC97;}
+     0% {background-color: #AD8783;}
+     25% {background-color: #C19F93;}
+     50% {background-color: #587579;}
+     75% {background-color: #434A67;}
+     100% {background-color: #8565A0;}
 }
 
 #pageTitle {
