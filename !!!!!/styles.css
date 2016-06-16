@@ -39,6 +39,10 @@
      margin: 10px;
 }
 
+#imgid {
+     margin: 20px;
+}
+
 #fddkdf, #idk {
      text-align: center;
      margin: auto;
@@ -47,6 +51,6 @@
 #idk {
      text-align: center;
      margin: auto;
-     width: 100px;
+     width: 120px;
      height: 25px;
 }
