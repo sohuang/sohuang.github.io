@@ -1,0 +1,33 @@
+#veryFirstThings {
+     display: block;
+}
+
+#veryFirstTitle {
+     width: 250px;
+     height: 40px;
+     text-align: center;
+     margin: auto;
+}
+
+#firstThings, #unoThings, #secondThings, #dosThings, #fddkdf, #returnButton {
+     display: none;
+}
+
+#allTitles {
+     width: 250px;
+     height: 40px;
+     text-align: center;
+     margin: auto;
+}
+
+.firstButtons, .secondButtons, .unoButtons, .dosButtons, .veryFirstButtons {
+     width: 245px;
+     height: 240px;
+     margin: auto;
+}
+
+.firstButtons *, .secondButtons *, .unoButtons *, .dosButtons *, .veryFirstButtons * {
+     width: 100px;
+     height: 100px;
+     margin: 10px;
+}
