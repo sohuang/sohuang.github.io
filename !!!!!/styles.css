@@ -1,6 +1,14 @@
 @font-face {
-     font-family: 'lemons can fly';
-     src: url('Lemons Can Fly.ttf');
+     font-family: 'gothammed';
+     src: url('gothamrmed.otf');
+}
+@font-face {
+     font-family: 'gothambook';
+     src: url('gothamrbook.otf');
+}
+
+body {
+     background-image: url("inflicted.png");
 }
 
 #veryFirstThings {
@@ -14,17 +22,18 @@
      margin: auto;
 }
 
-#firstThings, #unoThings, #secondThings, #dosThings, #fddkdf, #returnButton {
+#firstThings, #unoThings, #secondThings, #dosThings, #returnButton {
      display: none;
 }
 
 #allTitles {
-     width: 250px;
+     width: 400px;
      height: 40px;
      text-align: center;
      margin: auto;
-     font-family: 'lemons can fly';
-     font-size: 25px;
+     font-family: 'gothambook';
+     font-size: 20px;
+     color: white;
 }
 
 .firstButtons, .secondButtons, .unoButtons, .dosButtons, .veryFirstButtons {
@@ -37,20 +46,92 @@
      width: 100px;
      height: 100px;
      margin: 10px;
+     font-family: 'gothammed';
+     color: white;
+     border: none;
+     border-radius: 10px;
+     position: relative;
+}
+
+#returnButton {
+     width: 100px;
+     height: 25px;
+     border: 0px;
+     border-radius: 5px;
+     font-family: 'gothammed';
+     margin-top: 30px;
+     background: #a4a9b0;
+     box-shadow: 2px 2px 0px #5c6064;
+     color: white;
+     font-size: 15px;
+}
+#returnButton:hover {
+     background: #9AA0A8;
+}
+#returnButton:active {
+     background: #5c6064;
+     box-shadow: 0px 0px 0px;
+}
+
+.veryFirstButtons * {
+     background: #a0a9c9;
+     box-shadow: 3px 3px 0px #5a6075;
+}
+.veryFirstButtons *:hover {
+     background: #96a0c4;
+}
+.veryFirstButtons *:active {
+     background: #5a6075;
+     box-shadow: 0px 0px 0px;
+     position: relative;
+}
+
+.firstButtons *, .unoButtons * {
+     background: #af9aaa;
+     box-shadow: 3px 3px 0px #645560;
+}
+.firstButtons *:hover, .unoButtons *:hover {
+     background: #A78FA1;
+}
+.firstButtons *:active, .unoButtons *:active {
+     background: #645560;
+     box-shadow: 0px 0px 0px;
+     position: relative;
+}
+
+.secondButtons *, .dosButtons * {
+     background: #a5ae8a;
+     box-shadow: 3px 3px 0px #5d634b;
+}
+.secondButtons *:hover, .dosButtons *:hover {
+     background: #9BA57D;
+}
+.secondButtons *:active, .dosButtons *:active {
+     background: #5d634b;
+     box-shadow: 0px 0px 0px;
+     position: relative;
 }
 
 #imgid {
      margin: 20px;
 }
 
-#fddkdf, #idk {
+#idk {
      text-align: center;
+     width: 100px;
+     height: 25px;
      margin: auto;
 }
 
-#idk {
-     text-align: center;
+.someThings div {
+     position: absolute;
+     display: none;
      margin: auto;
-     width: 120px;
-     height: 25px;
+}
+
+.someThings {
+     width: 250px;
+     position: absolute;
+     margin-left: calc(50% - 150px);
+     margin-top: 50px;
 }

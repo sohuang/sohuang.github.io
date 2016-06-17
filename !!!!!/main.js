@@ -29,41 +29,49 @@ function secondFunction() {
 }
 
 function twoOneFunction() {
-     document.getElementById("fddkdf").style.display = "block";
+     document.getElementById("something1").style.display = "block";
      secondFunction();
 }
 function twoTwoFunction() {
-     document.getElementById("fddkdf").style.display = "block";
+     document.getElementById("something2").style.display = "block";
      secondFunction();
 }
 function twoThreeFunction() {
-     document.getElementById("fddkdf").style.display = "block";
+     document.getElementById("something3").style.display = "block";
      secondFunction();
 }
 function twoFourFunction() {
-     document.getElementById("fddkdf").style.display = "block";
+     document.getElementById("something4").style.display = "block";
      secondFunction();
 }
 
 function dosOneFunction() {
-     document.getElementById("fddkdf").style.display = "block";
+     document.getElementById("something5").style.display = "block";
      secondFunction();
 }
 function dosTwoFunction() {
-     document.getElementById("fddkdf").style.display = "block";
+     document.getElementById("something6").style.display = "block";
      secondFunction();
 }
 function dosThreeFunction() {
-     document.getElementById("fddkdf").style.display = "block";
+     document.getElementById("something7").style.display = "block";
      secondFunction();
 }
 function dosFourFunction() {
-     document.getElementById("fddkdf").style.display = "block"
+     document.getElementById("something8").style.display = "block";
      secondFunction();
 }
 
 function returnFunction() {
-     document.getElementById("fddkdf").style.display = "none";
+     // document.getElementsByClassName("someThings").style.display = "none";
+     document.getElementById("something1").style.display = "none";
+     document.getElementById("something2").style.display = "none";
+     document.getElementById("something3").style.display = "none";
+     document.getElementById("something4").style.display = "none";
+     document.getElementById("something5").style.display = "none";
+     document.getElementById("something6").style.display = "none";
+     document.getElementById("something7").style.display = "none";
+     document.getElementById("something8").style.display = "none";
      document.getElementById("veryFirstThings").style.display = "block";
      document.getElementById("allTitles").style.display = "block";
      document.getElementById("returnButton").style.display = "none";

@@ -193,6 +193,6 @@ function mouseClicked() {
 }
 
 function points(point) {
-    score += 5;
+    score += 25;
     point.remove();
 }
