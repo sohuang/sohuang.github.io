@@ -9,9 +9,10 @@
 
 body {
      background-image: url("inflicted.png");
+     text-align: center;
 }
 
-#veryFirstThings {
+#veryFirstThings, #secretDiv {
      display: block;
 }
 
@@ -134,4 +135,48 @@ body {
      position: absolute;
      margin-left: calc(50% - 150px);
      margin-top: 50px;
+}
+
+#secretButton {
+     width: 50px;
+     height: 25px;
+     border: none;
+     border-radius: 3px;
+     box-shadow: 2px 2px 0px #808080;
+     font-family: 'gothammed';
+     font-size: 15px;
+}
+#secretButton:active {
+     position: relative;
+     box-shadow: 0px 0px 0px;
+}
+.rainbow:hover {
+     -webkit-animation:rainbow 1s infinite;
+     animation:rainbow 1s infinite;
+}
+@-webkit-keyframes rainbow {
+     0% {color: #781C81;}
+     10% {color: #452D8A;}
+     20% {color: #4063B0;}
+     30% {color: #4B91C0;}
+     40% {color: #62AC9A;}
+     50% {color: #83BA6D;}
+     60% {color: #ABBE51;}
+     70% {color: #CEB641;}
+     80% {color: #E39A36;}
+     90% {color: #E6642C;}
+     100% {color: #D92120;}
+}
+@keyframes rainbow {
+     0% {color: #781C81;}
+     10% {color: #452D8A;}
+     20% {color: #4063B0;}
+     30% {color: #4B91C0;}
+     40% {color: #62AC9A;}
+     50% {color: #83BA6D;}
+     60% {color: #ABBE51;}
+     70% {color: #CEB641;}
+     80% {color: #E39A36;}
+     90% {color: #E6642C;}
+     100% {color: #D92120;}
 }
