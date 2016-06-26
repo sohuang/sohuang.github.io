@@ -13,6 +13,17 @@ body {
     
 }
 
+#banner {
+    height: 50px;
+    margin-top: -24px;
+    margin-left: -10px;
+    /*opacity:0.9;*/
+    background: url('http://66.media.tumblr.com/tumblr_lpvqxvTB9q1qffvip.gif') repeat-x left top;
+    width: 100%; 
+    position: fixed; 
+    z-index: 9999;
+}
+
 #title {
     color: white;
     text-shadow: 1px 1px 1px #03202e;
