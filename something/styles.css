@@ -1,6 +1,42 @@
 @font-face {
-    font-family: "euroference";
+    font-family: "eurof76";
     src: url('eurof76.ttf');
+}
+
+@font-face {
+    font-family: "eurof55";
+    src: url('eurof55.ttf');
+}
+
+@font-face {
+    font-family: "eurof56";
+    src: url('eurof56.ttf');
+}
+
+@font-face {
+    font-family: "bikob";
+    src: url('Biko_Bold.otf');
+}
+
+@font-face {
+    font-family: "bikor";
+    src: url('Biko_Regular.otf');
+}
+
+@font-face {
+    font-family: "why";
+    src: url('why.ttf');
+}
+
+@font-face {
+    font-family: "mc";
+    src: url('Multicolore.otf');
+}
+
+#title {
+    text-align: center;
+    font-family: "mc";
+    letter-spacing: 2px;
 }
 
 #mapid {
@@ -14,7 +50,8 @@
     margin: auto;
     margin-top: 30px;
     text-align: center;
-    font-family: "euroference";
+    font-family: "eurof76";
     /*font-style: italic;
     font-weight: bold;*/
 }
+

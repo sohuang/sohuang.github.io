@@ -7,9 +7,20 @@
      
      <body>
           <title>something</title>
+          <div id="title"><h1 class="fancy-title">mapmapmapmapmap</h1></div>
           <div id="mapid"></div>
           <div id="mapcaption">san francisco bay area</div>
-          <script src="https://npmcdn.com/leaflet@1.0.0-rc.2/dist/leaflet.js"></script>  <!--leaflet JS-->
-          <script src="main.js"></script>
+          
+          <script src="https://code.jquery.com/jquery-3.1.0.min.js"
+			  integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="
+			  crossorigin="anonymous"></script>                                        <!-- jquery -->
+          <script src="jquery.lettering-0.6.min.js"></script>                             <!--lettering-->
+          <script>
+               $(document).ready(function() {
+                    $(".fancy_title").lettering();
+               });
+          </script>                                                                       <!--lJSjquery-->
+          <script src="https://npmcdn.com/leaflet@1.0.0-rc.2/dist/leaflet.js"></script>   <!--leafletJS-->
+          <script src="main.js"></script>                                                 <!-- js file -->
      </body>
 </html>
