@@ -1,6 +1,20 @@
+@font-face {
+    font-family: "euroference";
+    src: url('eurof76.ttf');
+}
+
 #mapid {
     margin: auto;
-    margin-top: 5%;
+    margin-top: 30px;
     height: 400px;
-    width: 75%;
+    width: 80%;
+}
+
+#mapcaption {
+    margin: auto;
+    margin-top: 30px;
+    text-align: center;
+    font-family: "euroference";
+    /*font-style: italic;
+    font-weight: bold;*/
 }
