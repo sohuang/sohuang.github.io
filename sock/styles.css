@@ -6,3 +6,12 @@
      text-align: center;
      letter-spacing: 5px;
 }
+
+.navbar .navbar-nav {
+     display: inline-block;
+     float: none;
+}
+
+.navbar {
+     text-align: center;
+}
