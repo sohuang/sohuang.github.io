@@ -8,6 +8,10 @@
      letter-spacing: 5px;
 }
 
+#headernavbar {
+     position: fixed;
+}
+
 .navbar .navbar-nav {
      display: inline-block;
      float: none;
