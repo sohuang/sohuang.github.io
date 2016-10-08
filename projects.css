@@ -14,17 +14,21 @@ body {
 }
 
 #banner {
-    height: 50px;
-    margin-top: -24px;
+    height: 55px;
+    margin-top: -80px;
     margin-left: -10px;
     /*opacity:0.9;*/
-    background: url('http://66.media.tumblr.com/tumblr_lpvqxvTB9q1qffvip.gif') repeat-x left top;
+    /*background: url('http://66.media.tumblr.com/tumblr_lpvqxvTB9q1qffvip.gif') repeat-x left top;*/
+    background: url('http://i281.photobucket.com/albums/kk203/hiv0lt4g3/Pinky%20Sugar/lace/062-a.gif') repeat-x left top;
     width: 100%; 
     position: fixed; 
     z-index: 9999;
 }
 
 #title {
+    /*width: 50px;*/
+    margin-top: 80px;
+    /*position: relative;*/
     color: white;
     text-shadow: 1px 1px 1px #03202e;
 }
@@ -43,4 +47,32 @@ body {
 
 .links:hover {
     background: #005B6D;
+}
+
+#navlist {
+    padding: 0px;
+}
+
+#navlist li {
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    list-style: inline;
+    bottom: 10px;
+    display: inline-block;
+}
+
+#navlist ul {
+    text-align: center;
+}
+
+#projectlinks {
+    margin: auto;
+    width: 400px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 5px;
 }
