@@ -11,5 +11,14 @@ body {
     
     background-image: url("http://67.media.tumblr.com/ccd6564b657d03f126451fa05f3af8dd/tumblr_inline_mtjpahJTjv1s9mv75.png");
     background-repeat: repeat;
-    
+}
+
+.centeredList {
+    text-align: left;
+    list-style-position: inside;
+}
+
+#skillsDiv {
+    margin: auto;
+    width: 320px;
 }
