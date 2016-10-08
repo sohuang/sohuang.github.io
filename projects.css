@@ -13,6 +13,16 @@ body {
     
 }
 
+.sourcelinks:link {
+    color: rgb(80, 100, 150);
+}
+.sourcelinks:visited {
+    color: rgb(80, 100, 150);
+}
+.sourcelinks:hover {
+    color: rgb(160, 150, 180);
+}
+
 #banner {
     height: 55px;
     margin-top: -80px;
@@ -31,6 +41,11 @@ body {
     /*position: relative;*/
     color: white;
     text-shadow: 1px 1px 1px #03202e;
+}
+
+h3 {
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 .unstyled {
@@ -68,11 +83,14 @@ body {
     text-align: center;
 }
 
-#projectlinks {
+.projectlinks {
     margin: auto;
+    margin-top: 10px;
+    margin-bottom: 20px;
     width: 400px;
     padding-top: 10px;
     padding-bottom: 10px;
-    background-color: rgba(255, 255, 255, 0.95);
+    background-color: rgb(255, 255, 255);
+    background-color: rgba(255, 255, 255, 0.925);
     border-radius: 5px;
 }
