@@ -20,7 +20,7 @@ function pagestart(){
     chip10=new Chip("chip10",47,68);
     chip11=new Chip("chip11",47,68);
     chip12=new Chip("chip12",47,68);
-    chip13=new Chip("chip13",47,68);
+    chip13=new Chip("chip13",47,608);
     chip14=new Chip("chip14",47,68);
     chip15=new Chip("chip15",47,68);
     
