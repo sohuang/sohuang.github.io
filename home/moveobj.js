@@ -30,9 +30,9 @@ if (document.getElementById){
 eval("chip="+chipname);
    if (window.innerWidth || window.opera){
 		 pageX=window.pageXOffset;
-     pageW=window.innerWidth-40;
+     pageW=window.innerWidth-0;
      pageY=window.pageYOffset;
-     pageH=window.innerHeight-20;
+     pageH=window.innerHeight-0;
     }
    else if (document.body){
 		 pageX=iecompattest().scrollLeft;
