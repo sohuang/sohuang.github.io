@@ -42,18 +42,26 @@ p {
     text-shadow: 1px 1px 0px #461a2c;
 }
 
-#links{
-    padding: 0px;
+a:link {
+    color: #95A3A4;
+}
+a:visited {
+    color: #95A3A4;
+}
+a:hover {
+    color: #697268;
+}
+a:active {
+    color: #4E5340;
 }
 
-#links li {
-    list-style: inline;
-    display: inline-block;
-    list-style-type: none;
+::selection {
+    background: #B7D1DA;
+    /*color: white;*/
 }
 
-#links ul {
-    text-align: center;
+#links td {
+    /*border: 1px dotted black;*/
 }
 
 #navlist {
