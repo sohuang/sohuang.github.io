@@ -3,324 +3,45 @@
     <head>
         <meta name="viewport" content="width-device-width, initial-scale=1.0">
         <link href='https://fonts.googleapis.com/css?family=ABeeZee' rel='stylesheet' type='text/css'>
-        <link rel="stylesheet" href="styles.css"/>
-        
-        <script type="text/javascript" src="moveobj.js"> </script>
-        <script type="text/javascript">
-        
-        // <!--* Floating image script- By Virtual_Max (http://www.geocities.com/siliconvalley/lakes/8620)-->
-        // <!--* Modified by Dynamic Drive for various improvements-->
-        // <!--* Visit Dynamic Drive at http://www.dynamicdrive.com/ for full source code-->
+        <link rel="stylesheet" href="home/styles.css"/>
 
+        <script type="text/javascript" src="home/moveobj.js"> </script>
 
-        // <!--//Step 1: Define unique variable names depending on number of flying images (ie:3):-->
-        var heart1, heart2, heart3, star1, star2, star3, rainbow1, rainbow2, rainbow3, cat1, cat2, cat3
-
-        function pagestart(){
-        //Step 2: Using the same variable names as 1), add or delete more of the below lines:
-            heart1=new Chip("heart1",47,68);
-            heart2=new Chip("heart2",47,68);
-            heart3=new Chip("heart3",47,68);
-            star1=new Chip("star1",47,68);
-            star2=new Chip("star2",47,68);
-            star3=new Chip("star3",47,68);
-            rainbow1=new Chip("rainbow1",47,68);
-            rainbow2=new Chip("rainbow2",47,68);
-            rainbow3=new Chip("rainbow3",47,68);
-            cat1=new Chip("cat1",47,68);
-            cat2=new Chip("cat2",47,68);
-            cat3=new Chip("cat3",47,68);
-            catt1=new Chip("catt1",47,68);
-            catt2=new Chip("catt2",47,68);
-            catt3=new Chip("catt3",47,68);
-            
-        //Step 3: Using the same variable names as 1), add or delete more of the below lines:
-            movechip("heart1");
-            movechip("heart2");
-            movechip("heart3");
-            movechip("star1");
-            movechip("star2");
-            movechip("star3");
-            movechip("rainbow1");
-            movechip("rainbow2");
-            movechip("rainbow3");
-            movechip("cat1");
-            movechip("cat2");
-            movechip("cat3");
-            movechip("catt1");
-            movechip("catt2");
-            movechip("catt3");
-
-        }
-
-            if (window.addEventListener)
-            window.addEventListener("load", pagestart, false)
-            else if (window.attachEvent)
-            window.attachEvent("onload", pagestart)
-            else if (document.getElementById)
-            window.onload=pagestart
-
-        </script>
-
-        <script type="text/javascript">
-          // <![CDATA[
-          var colour="#FFFFFF";
-          var sparkles=120;
-
-          /****************************
-          *  Tinkerbell Magic Sparkle *
-          * (c) 2005 mf2fm web-design *
-          *  http://www.mf2fm.com/rv  *
-          * DON'T EDIT BELOW THIS BOX *
-          ****************************/
-          var x=ox=400;
-          var y=oy=300;
-          var swide=800;
-          var shigh=600;
-          var sleft=sdown=0;
-          var tiny=new Array();
-          var star=new Array();
-          var starv=new Array();
-          var starx=new Array();
-          var stary=new Array();
-          var tinyx=new Array();
-          var tinyy=new Array();
-          var tinyv=new Array();
-
-          window.onload=function() { if (document.getElementById) {
-          var i, rats, rlef, rdow;
-          for (var i=0; i<sparkles; i++) {
-            var rats=createDiv(3, 3);
-            rats.style.visibility="hidden";
-            document.body.appendChild(tiny[i]=rats);
-            starv[i]=0;
-            tinyv[i]=0;
-            var rats=createDiv(5, 5);
-            rats.style.backgroundColor="transparent";
-            rats.style.visibility="hidden";
-            var rlef=createDiv(1, 5);
-            var rdow=createDiv(5, 1);
-            rats.appendChild(rlef);
-            rats.appendChild(rdow);
-            rlef.style.top="2px";
-            rlef.style.left="0px";
-            rdow.style.top="0px";
-            rdow.style.left="2px";
-            document.body.appendChild(star[i]=rats);
-          }
-          set_width();
-          sparkle();
-        }}
-
-function sparkle() {
-  var c;
-  if (x!=ox || y!=oy) {
-    ox=x;
-    oy=y;
-    for (c=0; c<sparkles; c++) if (!starv[c]) {
-      star[c].style.left=(starx[c]=x)+"px";
-      star[c].style.top=(stary[c]=y)+"px";
-      star[c].style.clip="rect(0px, 5px, 5px, 0px)";
-      star[c].style.visibility="visible";
-      starv[c]=50;
-      break;
-    }
-  }
-  for (c=0; c<sparkles; c++) {
-    if (starv[c]) update_star(c);
-    if (tinyv[c]) update_tiny(c);
-  }
-  setTimeout("sparkle()", 40);
-}
-
-function update_star(i) {
-  if (--starv[i]==25) star[i].style.clip="rect(1px, 4px, 4px, 1px)";
-  if (starv[i]) {
-    stary[i]+=1+Math.random()*3;
-    if (stary[i]<shigh+sdown) {
-      star[i].style.top=stary[i]+"px";
-      starx[i]+=(i%5-2)/5;
-      star[i].style.left=starx[i]+"px";
-    }
-    else {
-      star[i].style.visibility="hidden";
-      starv[i]=0;
-      return;
-    }
-  }
-  else {
-    tinyv[i]=50;
-    tiny[i].style.top=(tinyy[i]=stary[i])+"px";
-    tiny[i].style.left=(tinyx[i]=starx[i])+"px";
-    tiny[i].style.width="2px";
-    tiny[i].style.height="2px";
-    star[i].style.visibility="hidden";
-    tiny[i].style.visibility="visible"
-  }
-}
-
-function update_tiny(i) {
-  if (--tinyv[i]==25) {
-    tiny[i].style.width="1px";
-    tiny[i].style.height="1px";
-  }
-  if (tinyv[i]) {
-    tinyy[i]+=1+Math.random()*3;
-    if (tinyy[i]<shigh+sdown) {
-      tiny[i].style.top=tinyy[i]+"px";
-      tinyx[i]+=(i%5-2)/5;
-      tiny[i].style.left=tinyx[i]+"px";
-    }
-    else {
-      tiny[i].style.visibility="hidden";
-      tinyv[i]=0;
-      return;
-    }
-  }
-  else tiny[i].style.visibility="hidden";
-}
-
-document.onmousemove=mouse;
-function mouse(e) {
-  set_scroll();
-  y=(e)?e.pageY:event.y+sdown;
-  x=(e)?e.pageX:event.x+sleft;
-}
-
-function set_scroll() {
-  if (typeof(self.pageYOffset)=="number") {
-    sdown=self.pageYOffset;
-    sleft=self.pageXOffset;
-  }
-  else if (document.body.scrollTop || document.body.scrollLeft) {
-    sdown=document.body.scrollTop;
-    sleft=document.body.scrollLeft;
-  }
-  else if (document.documentElement && (document.documentElement.scrollTop || document.documentElement.scrollLeft)) {
-    sleft=document.documentElement.scrollLeft;
-	sdown=document.documentElement.scrollTop;
-  }
-  else {
-    sdown=0;
-    sleft=0;
-  }
-}
-
-window.onresize=set_width;
-function set_width() {
-  if (typeof(self.innerWidth)=="number") {
-    swide=self.innerWidth;
-    shigh=self.innerHeight;
-  }
-  else if (document.documentElement && document.documentElement.clientWidth) {
-    swide=document.documentElement.clientWidth;
-    shigh=document.documentElement.clientHeight;
-  }
-  else if (document.body.clientWidth) {
-    swide=document.body.clientWidth;
-    shigh=document.body.clientHeight;
-  }
-}
-
-function createDiv(height, width) {
-  var div=document.createElement("div");
-  div.style.position="absolute";
-  div.style.height=height+"px";
-  div.style.width=width+"px";
-  div.style.overflow="hidden";
-  div.style.backgroundColor=colour;
-  return (div);
-}
-// ]]>
-</script>
-
+        <script type="text/javascript" src="home/floating.js"></script>
+        <script type="text/javascript" src="home/sparkle.js"></script>
   </head>
 
   <body>
     <div id="banner"></div>
     
-    <img src="http://pngimg.com/upload/face_PNG5658.png" class="kanye">
+    <img src="home/kanye.png" class="kanye">
     
     <h1>kanye</h1>
     <p>west</p>
     <p>the very best</p>
     
-    <ul id="links">
+<!--     <ul id="links">
       <li><a href="http://sohuang.github.io/about">about</a></li>
       <li><a href="http://sohuang.github.io/projects">projects</a></li>
-    </ul>    
-        
-      <!-- Step 4: Define your flying images. For each image's ID tag, use the same variable names as 1) above -->
+    </ul>  -->
 
-      <DIV ID="heart1" STYLE="position:absolute; left: -500px; width:47; height:68;">
-      <IMG SRC="http://67.media.tumblr.com/tumblr_lkgyq6aP1Z1qb7h7x.gif" BORDER=0></a>
-      </DIV>
+    <table id="links" align="center">
+      <tr>
+        <td><a href="http://sohuang.github.io/about">about</a></td>
+        <td><a href="http://sohuang.github.io/projects">projects</a></td>
+      </tr>
+    </table>
+    
+    <script src = "floating.js"></script>
 
-      <DIV ID="heart2" STYLE="position:absolute; left: -500px; width:47; height:68;">
-      <IMG SRC="http://67.media.tumblr.com/tumblr_lkgyq6aP1Z1qb7h7x.gif" BORDER=0></a>
-      </DIV>
-
-      <DIV ID="heart3" STYLE="position:absolute; left: -500px; width:47; height:68;">
-      <IMG SRC="http://67.media.tumblr.com/tumblr_lkgyq6aP1Z1qb7h7x.gif" BORDER=0></a>
-      </DIV>
-        
-      <DIV ID="star1" STYLE="position:absolute; left: -500px; width:47; height:68;">
-      <IMG SRC="http://66.media.tumblr.com/tumblr_m3lvspDFSW1qf290m.gif" BORDER=0></a>
-      </DIV>
-        
-      <DIV ID="star2" STYLE="position:absolute; left: -500px; width:47; height:68;">
-      <IMG SRC="http://66.media.tumblr.com/tumblr_m3lvspDFSW1qf290m.gif" BORDER=0></a>
-      </DIV>
-        
-      <DIV ID="star3" STYLE="position:absolute; left: -500px; width:47; height:68;">
-      <IMG SRC="http://66.media.tumblr.com/tumblr_m3lvspDFSW1qf290m.gif" BORDER=0></a>
-      </DIV>
-        
-      <DIV ID="rainbow1" STYLE="position:absolute; left: -500px; width:47; height:68;">
-      <IMG SRC="http://65.media.tumblr.com/39d0dd8fa498ef1d50f17cfafd843add/tumblr_inline_mojkb8KR9y1qz4rgp.gif" BORDER=0></a>
-      </DIV>
-        
-      <DIV ID="rainbow2" STYLE="position:absolute; left: -500px; width:47; height:68;">
-      <IMG SRC="http://65.media.tumblr.com/39d0dd8fa498ef1d50f17cfafd843add/tumblr_inline_mojkb8KR9y1qz4rgp.gif" BORDER=0></a>
-      </DIV>
-        
-      <DIV ID="rainbow3" STYLE="position:absolute; left: -500px; width:47; height:68;">
-      <IMG SRC="http://65.media.tumblr.com/39d0dd8fa498ef1d50f17cfafd843add/tumblr_inline_mojkb8KR9y1qz4rgp.gif" BORDER=0></a>
-      </DIV>
-        
-      <DIV ID="cat1" STYLE="position:absolute; left: -500px; width:47; height:68;">
-      <IMG SRC="http://66.media.tumblr.com/4f5dc590bc09b75b273f9eab1c931f28/tumblr_inline_mm2wnxgTbV1qz4rgp.gif" BORDER=0></a>
-      </DIV>
-        
-      <DIV ID="cat2" STYLE="position:absolute; left: -500px; width:47; height:68;">
-      <IMG SRC="http://66.media.tumblr.com/4f5dc590bc09b75b273f9eab1c931f28/tumblr_inline_mm2wnxgTbV1qz4rgp.gif" BORDER=0></a>
-      </DIV>
-        
-      <DIV ID="cat3" STYLE="position:absolute; left: -500px; width:47; height:68;">
-      <IMG SRC="http://66.media.tumblr.com/4f5dc590bc09b75b273f9eab1c931f28/tumblr_inline_mm2wnxgTbV1qz4rgp.gif" BORDER=0></a>
-      </DIV>
-        
-      <DIV ID="catt1" STYLE="position:absolute; left: -500px; width:47; height:68;">
-      <IMG SRC="http://66.media.tumblr.com/de0f5a63800b33e873d7f052d8dd33a8/tumblr_inline_mm2wnzpLcK1qz4rgp.gif" BORDER=0></a>
-      </DIV>
-        
-      <DIV ID="catt2" STYLE="position:absolute; left: -500px; width:47; height:68;">
-      <IMG SRC="http://66.media.tumblr.com/de0f5a63800b33e873d7f052d8dd33a8/tumblr_inline_mm2wnzpLcK1qz4rgp.gif" BORDER=0></a>
-      </DIV>
-        
-      <DIV ID="catt3" STYLE="position:absolute; left: -500px; width:47; height:68;">
-      <IMG SRC="http://66.media.tumblr.com/de0f5a63800b33e873d7f052d8dd33a8/tumblr_inline_mm2wnzpLcK1qz4rgp.gif" BORDER=0></a>
-      </DIV>
-      
-      <div id="wrapper">
-        <div id="footer">
-          <ul id="navlist">
-            <li id="active"><a href="http://sohuang.github.io/" id="home">home</a></li>
-          </ul>
-        </div>
+    <div id="wrapper">
+      <div id="footer">
+        <ul id="navlist">
+          <li id="active"><a href="http://sohuang.github.io/" id="home">home</a></li>
+        </ul>
       </div>
+    </div>
         
   </body>
 
-    
 </html>

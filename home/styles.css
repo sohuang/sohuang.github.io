@@ -2,8 +2,8 @@
     font-family: 'comicsans';
     src: url('https://preview.c9users.io/sophieh/projects/ComicSansMSRegular.ttf');
     
-    font-family: 'silkscreen';
-    src: url('web fonts/ silkscreen_normal_macroman/ slkscr-webfont.eot');
+    /*font-family: 'silkscreen';*/
+    /*src: url('web fonts/ silkscreen_normal_macroman/ slkscr-webfont.eot');*/
 }
 
 .kanye {
@@ -11,26 +11,28 @@
     margin-top: 10%;
 }
 
+/*
 #banner {
     height: 55px;
     margin-top: -10px;
     margin-left: -10px;
-    /*opacity: 0.9;*/
     background: url("http://67.media.tumblr.com/tumblr_lsznmmHq7g1ql1l0v.gif") repeat-x left top;
     width: 100%;
     position: fixed;
     z-index: 9999;
 }
+*/
 
 body {
     text-align: center;
-    font-family: 'comicsans', "Comic Sans MS", sans-serif;
-    
+    font-family: Consolas, monaco, monospace;
     background-image: url("http://67.media.tumblr.com/e70a0da214e04e0451d7fdbe92bea124/tumblr_inline_mtjp9xxvC81s9mv75.png");
     background-repeat: repeat;
+    overflow: hidden;
 }
 
 h1 {
+    font-family: 'comicsans', "Comic Sans MS", sans-serif;
     color: white;
     text-shadow: 1px 1px 0px #461a2c;
 }
@@ -40,19 +42,26 @@ p {
     text-shadow: 1px 1px 0px #461a2c;
 }
 
-#links{
-    padding: 0px;
+a:link {
+    color: #95A3A4;
+}
+a:visited {
+    color: #95A3A4;
+}
+a:hover {
+    color: #697268;
+}
+a:active {
+    color: #4E5340;
 }
 
-#links li {
-    list-style: inline;
-    display: inline-block;
-    list-style-type: none;
-    font-family: Consolas, monaco, monospace;
+::selection {
+    background: #B7D1DA;
+    /*color: white;*/
 }
 
-#links ul {
-    text-align: center;
+#links td {
+    /*border: 1px dotted black;*/
 }
 
 #navlist {
@@ -73,4 +82,3 @@ p {
 #navlist ul {
     text-align: center;
 }
-
