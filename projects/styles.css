@@ -5,12 +5,16 @@
 
 body {
     text-align: center;
-    font-family: 'comicsans', "Comic Sans MS", sans-serif;
+    font-family: Consolas, sans-serif;
     font-weight: normal;
     
     background-image: url("bg.png");
     background-repeat: repeat;
     
+}
+
+.projectlinks {
+    font-family: 'comicsans', "Comic Sans MS", sans-serif;
 }
 
 .sourcelinks:link {
@@ -27,8 +31,6 @@ body {
     height: 55px;
     margin-top: -80px;
     margin-left: -10px;
-    /*opacity:0.9;*/
-    /*background: url('http://66.media.tumblr.com/tumblr_lpvqxvTB9q1qffvip.gif') repeat-x left top;*/
     background: url('banner.gif') repeat-x left top;
     width: 100%; 
     position: fixed; 
@@ -36,9 +38,7 @@ body {
 }
 
 #title {
-    /*width: 50px;*/
     margin-top: 80px;
-    /*position: relative;*/
     color: white;
     text-shadow: 1px 1px 1px #03202e;
 }
@@ -61,7 +61,8 @@ h3 {
 }
 
 .links:hover {
-    background: #005B6D;
+    /*background: #005B6D;*/
+    color: #005B6D;
 }
 
 #navlist {
@@ -81,6 +82,14 @@ h3 {
 
 #navlist ul {
     text-align: center;
+}
+
+#navlist a:link {
+    color: #B8CBCC;
+}
+
+#navlist a:visited {
+    color: #B8CBCC;
 }
 
 .projectlinks {
