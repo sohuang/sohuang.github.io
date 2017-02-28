@@ -8,7 +8,7 @@ body {
     font-family: 'comicsans', "Comic Sans MS", sans-serif;
     font-weight: normal;
     
-    background-image: url("http://66.media.tumblr.com/04753ebb14b94f5722413508e8402319/tumblr_inline_mwbrvbIIdt1qkc0d3.png");
+    background-image: url("bg.png");
     background-repeat: repeat;
     
 }
@@ -29,7 +29,7 @@ body {
     margin-left: -10px;
     /*opacity:0.9;*/
     /*background: url('http://66.media.tumblr.com/tumblr_lpvqxvTB9q1qffvip.gif') repeat-x left top;*/
-    background: url('http://i281.photobucket.com/albums/kk203/hiv0lt4g3/Pinky%20Sugar/lace/062-a.gif') repeat-x left top;
+    background: url('banner.gif') repeat-x left top;
     width: 100%; 
     position: fixed; 
     z-index: 9999;
