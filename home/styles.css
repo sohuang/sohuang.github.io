@@ -26,8 +26,8 @@
 body {
     text-align: center;
     font-family: Consolas, monaco, monospace;
-    background-image: url("http://67.media.tumblr.com/e70a0da214e04e0451d7fdbe92bea124/tumblr_inline_mtjp9xxvC81s9mv75.png");
-    background-repeat: repeat;
+    /*background-image: url("bg01.png");*/
+    /*background-repeat: repeat;*/
     overflow: hidden;
 }
 
