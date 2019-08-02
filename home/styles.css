@@ -43,10 +43,12 @@ p {
 }
 
 a:link {
-    color: #95A3A4;
+    /*color: #95A3A4;*/
+    color: #a8bbbd;
 }
 a:visited {
-    color: #95A3A4;
+    /*color: #95A3A4;*/
+    color: #a8bbbd;
 }
 a:hover {
     color: #697268;
@@ -62,6 +64,7 @@ a:active {
 
 #links td {
     /*border: 1px dotted black;*/
+    text-shadow: 1px 1px 1px #8c9aa1;
 }
 
 #navlist {
@@ -77,6 +80,7 @@ a:active {
     list-style: inline;
     bottom: 10px;
     display: inline-block;
+    text-shadow: 1px 1px 1px #8c9aa1;
 }
 
 #navlist ul {
