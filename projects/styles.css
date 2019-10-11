@@ -65,6 +65,12 @@ h3 {
     color: #005B6D;
 }
 
+.footnotes {
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+}
+
 #navlist {
     padding: 0px;
 }
@@ -102,4 +108,9 @@ h3 {
     background-color: rgb(255, 255, 255);
     background-color: rgba(255, 255, 255, 0.925);
     border-radius: 5px;
+}
+
+#hackCampProjects {
+    /*margin-bottom: 5px;*/
+    /*padding-bottom: 1px;*/
 }
