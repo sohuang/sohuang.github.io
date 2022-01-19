@@ -83,9 +83,10 @@ a:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-end;
+    /*justify-content: flex-end;*/
     text-align: justify;
-    text-align-last: right;
+    /*text-align-last: right;*/
+    text-align-last: center;
 }
 .about-hero h1 {
     font-size: 36px;
@@ -129,4 +130,43 @@ a:hover {
 }
 .project-item p {
     font-size: 16px;
+}
+
+.about-links {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+.about-links p, .about-links a {
+    font-size: 12px;
+}
+.link-icons a {
+    font-size: 16px;
+}
+.about-links p {
+/*    margin: 10px 0;
+*/}
+.about-links ul {
+    list-style-type: none;
+    padding: 0;
+}
+.about-links li {
+    display: inline;
+    margin: 10px;
+    padding: 0;
+}
+.about-links a {
+    color: black;
+    text-decoration: none;
+    transition: 0.3s;
+}
+.about-links a:visited {
+    color: black;
+    text-decoration: none;
+    transition: 0.3s;
+}
+.about-links a:hover {
+    color: blue;
+    text-decoration: underline;
+    transition: 0.3s;
 }
